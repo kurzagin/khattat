@@ -1,62 +1,56 @@
 # Khattat (خطاط)
 
-Khattat is a professional, web-based geometric drafting tool specifically designed for creating **Square Kufic (الخط الكوفي المربع)** calligraphy. It provides a pixel-perfect, infinite grid canvas optimized for designers and calligraphers to build, save, and export complex typographic shapes.
+Khattat is a free and open-source geometric drafting tool for creating Square Kufic (الخط الكوفي المربع) calligraphy. It provides a precise infinite-grid canvas for drawing, transforming, saving, and exporting typographic designs.
 
-## 🌟 Key Features
+## Features
 
-### 🖌️ Infinite Grid Workspace
-- **Limitless Canvas**: Pan and zoom infinitely across a hardware-accelerated grid canvas.
-- **Precision Drawing**: Snap-to-grid drawing and erasing tools tailored for block-based typography.
-- **Custom Colors**: Integrated color picker with HEX support for multi-colored compositions.
+- Infinite, zoomable grid workspace with snap-to-grid drawing
+- Draw, erase, pan, marquee-select, recolor, rotate, flip, and scale tools
+- Reusable Kufic preset library with positional categories
+- SVG and high-resolution PNG export
+- Portable `.khatt` project files
+- Undo and redo history
+- Web and Tauri desktop applications
 
-### ✂️ Advanced Selection & Manipulation
-- **Marquee Select**: Highlight specific regions of your canvas.
-- **Transformations**: Instantly **Rotate 90°**, **Flip Horizontal**, and **Flip Vertical**.
-- **Scale & Resize**: 8-point bounding box handles allow you to scale your selections up or down seamlessly.
-- **Drag & Drop**: Move selected blocks anywhere on the canvas.
-- **Live Recoloring**: Selecting a shape automatically detects its color. Changing the color picker while a selection is active instantly recolors the entire selection.
+## Repository structure
 
-### 📚 Kufic Preset Library
-- **Save Shapes**: Save your constructed letters as reusable presets directly into the Library.
-- **Contextual Categorization**: Tag shapes by their Arabic positional rules (*Isolate, Initial, Medial, Final, Variant*).
-- **Stamp Tool**: Quickly "stamp" saved letters from your library onto the canvas to construct full words rapidly.
+- `apps/desktop` — Next.js editor packaged with Tauri
+- `apps/web` — web application
+- `apps/marketing` — project website and release notes
+- `packages/ui` — shared Khattat editor UI
+- `packages/core` — shared core package
 
-### 💾 Project Management (.khatt)
-- **Save State**: Export your current session as a lightweight `.khatt` file. This saves your drawn cells, viewport position, zoom level, and active references.
-- **Resume Work**: Open a `.khatt` file at any time to instantly restore your workspace and continue designing exactly where you left off.
+The former public/private split has been consolidated into this single repository. The complete application source is available here; there is no paid edition or feature-gated source tree.
 
-### ⏪ Robust Undo/Redo Engine
-- Features a highly reliable history stack that remembers your last 10 actions.
-- Automatically captures draw strokes, transformations, deletions, and canvas clears.
+## Development
 
-### 🖥️ "Pro" Distraction-Free Workflow
-- **Immersive Fullscreen**: Enter fullscreen mode to automatically collapse all UI elements for a distraction-free drawing experience.
-- **Arabic Reference Panel**: A draggable, collapsible floating panel to display Arabic text as a visual reference while constructing your typography.
-- **Lightning-Fast Shortcuts**: Keep one hand on the keyboard with industry-standard shortcuts.
+Khattat uses [Bun](https://bun.sh/) and Turborepo.
 
-#### Keyboard Shortcuts
-| Key | Action |
-| --- | --- |
-| \`Tab\` | Toggle UI Visibility (Show/Hide all toolbars) |
-| \`T\` | Draw Tool |
-| \`E\` | Eraser Tool |
-| \`H\` | Hand Tool (Pan) |
-| \`V\` / \`M\`| Marquee Selection Tool |
-| \`C\` | Toggle Color Picker |
-| \`L\` | Toggle Preset Library |
-| \`Ctrl+Z\` | Undo |
-| \`Ctrl+Y\` | Redo |
-| \`Ctrl+S\` | Save Project (.khatt) |
-| \`Ctrl+O\` | Open Project (.khatt) |
-| \`Delete\` | Delete current selection |
+```bash
+bun install
+bun run dev
+```
 
-## 📞 Contact & Support
+Other useful commands:
 
-- **Website**: [khattat.krzgn.xyz](https://khattat.krzgn.xyz)
-- **Email**: khattat@krzgn.xyz
-- **X (Twitter)**: [@kurzagin](https://twitter.com/kurzagin)
-- **GitHub**: [@krzgn](https://github.com/krzgn)
+```bash
+bun run build
+bun run lint
+```
 
----
+To work on an individual app, run its scripts through Bun from that app's directory. Building the native desktop shell also requires the Tauri prerequisites for your platform.
 
-**Issue Reporting:** Bug reports and feature requests can be opened here or at [ezagin/khattat](https://github.com/ezagin/khattat).
+## Contributing
+
+Bug reports, feature requests, documentation improvements, and code contributions are welcome. Please open an issue before beginning a large change so the approach can be discussed.
+
+## License
+
+Khattat is released under the [MIT License](LICENSE).
+
+## Contact
+
+- Website: [khattat.krzgn.xyz](https://khattat.krzgn.xyz)
+- Email: [khattat@krzgn.xyz](mailto:khattat@krzgn.xyz)
+- X: [@kurzagin](https://twitter.com/kurzagin)
+- GitHub: [@krzgn](https://github.com/krzgn)

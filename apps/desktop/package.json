@@ -1,0 +1,45 @@
+{
+  "name": "desktop",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "sync-presets": "bun run scripts/sync-presets.ts",
+    "dev": "bun run sync-presets && next dev",
+    "build": "bun run sync-presets && next build",
+    "start": "next start",
+    "lint": "eslint",
+    "upload": "bun run scripts/upload-r2.ts"
+  },
+  "dependencies": {
+    "@khattat/ui": "workspace:*",
+    "@tauri-apps/api": "^2.11.0",
+    "@tauri-apps/plugin-dialog": "^2.7.1",
+    "@tauri-apps/plugin-fs": "^2.5.1",
+    "@tauri-apps/plugin-shell": "^2.3.5",
+    "@tauri-apps/plugin-sql": "^2.4.0",
+    "lucide-react": "^1.17.0",
+    "next": "16.2.7",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@aws-sdk/client-s3": "^3.1067.0",
+    "@tailwindcss/postcss": "^4",
+    "@tauri-apps/cli": "^2.11.2",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.7",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "ignoreScripts": [
+    "sharp",
+    "unrs-resolver"
+  ],
+  "trustedDependencies": [
+    "sharp",
+    "unrs-resolver"
+  ]
+}
