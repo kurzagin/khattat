@@ -25,7 +25,8 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 /* Custom premium animations */
@@ -40,12 +41,21 @@ body {
   50% { opacity: 0.8; }
 }
 
+@keyframes grid-move {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(32px); }
+}
+
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
 
 .animate-pulse-slow {
   animation: pulse-slow 8s ease-in-out infinite;
+}
+
+.animate-grid {
+  animation: grid-move 2s linear infinite;
 }
 
 /* High-end glass utility */
