@@ -1,6 +1,29 @@
 ﻿import { ArrowLeft, Sparkles, CheckCircle2, History, Info, MonitorDown, LayoutTemplate, Brush } from "lucide-react";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Updates and Changelog",
+  description:
+    "See the latest Khattat releases, improvements, and Square Kufic editor updates.",
+  alternates: { canonical: "/updates" },
+  openGraph: {
+    type: "website",
+    url: "/updates",
+    title: "Khattat Updates and Changelog",
+    description:
+      "See the latest releases and improvements to the Khattat Square Kufic editor.",
+    siteName: "Khattat",
+    images: [
+      {
+        url: "/og.png",
+        width: 1730,
+        height: 909,
+        alt: "Khattat — Precision tools for Square Kufic calligraphy",
+      },
+    ],
+  },
+};
+
 export default function UpdatesPage() {
   return (
     <main className="min-h-screen bg-black text-white selection:bg-emerald-500/30 selection:text-emerald-200 relative overflow-hidden font-sans">

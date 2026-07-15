@@ -11,10 +11,22 @@ export default function VideoPlayer({ src, title }: VideoPlayerProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    // Force the video to play to overcome browser autoplay suppression or hydration issues
-    if (videoRef.current) {
-      videoRef.current.play().catch(console.error);
-    }
+    const video = videoRef.current;
+    if (!video) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          video.play().catch(() => undefined);
+        } else {
+          video.pause();
+        }
+      },
+      { rootMargin: "200px 0px", threshold: 0.1 },
+    );
+
+    observer.observe(video);
+    return () => observer.disconnect();
   }, [src]);
 
   return (
@@ -22,11 +34,10 @@ export default function VideoPlayer({ src, title }: VideoPlayerProps) {
       <video
         ref={videoRef}
         title={title}
-        autoPlay
         loop
         muted
         playsInline
-        preload="auto"
+        preload="metadata"
         className="w-full h-auto outline-none object-cover"
       >
         <source src={src} type="video/webm" />

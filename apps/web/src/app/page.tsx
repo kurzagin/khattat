@@ -16,9 +16,46 @@ const TwitterIcon = ({ size = 24, className = "" }) => (
   </svg>
 );
 
+const softwareApplicationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Khattat",
+  url: "https://khattat.krzgn.xyz",
+  description:
+    "A professional desktop and web editor for creating Square Kufic calligraphy on an infinite, precise grid.",
+  applicationCategory: "DesignApplication",
+  operatingSystem: "Web, Windows 10, Windows 11",
+  softwareVersion: "1.0.0",
+  author: {
+    "@type": "Person",
+    name: "Kur Zagin",
+    url: "https://krzgn.xyz",
+  },
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
+  },
+  featureList: [
+    "Infinite canvas",
+    "Square Kufic grid drawing",
+    "Personal preset library",
+    "Precision snapping",
+    "PNG and SVG export",
+  ],
+  downloadUrl: "https://github.com/kurzagin/khattat/releases/latest",
+  sameAs: ["https://github.com/kurzagin/khattat"],
+};
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white selection:bg-blue-500/30 selection:text-blue-200 relative overflow-hidden font-sans">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(softwareApplicationJsonLd),
+        }}
+      />
 
       {/* Immersive Background Effects */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">

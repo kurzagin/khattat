@@ -13,7 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://krzgn.xyz"),
+  metadataBase: new URL("https://khattat.krzgn.xyz"),
+  applicationName: "Khattat",
+  category: "design",
   title: {
     default: "Khattat | Professional Square Kufic Calligraphy Editor",
     template: "%s | Khattat",
@@ -31,22 +33,34 @@ export const metadata: Metadata = {
     "الخط الكوفي",
     "الخط الكوفي المربع",
   ],
-  authors: [{ name: "Khattat", url: "https://krzgn.xyz" }],
-  creator: "Khattat",
+  authors: [{ name: "Kur Zagin", url: "https://krzgn.xyz" }],
+  creator: "Kur Zagin",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://krzgn.xyz",
+    url: "/",
     title: "Khattat | Professional Square Kufic Calligraphy Editor",
     description:
       "An infinite, pixel-perfect digital canvas built specifically for professional Kufic calligraphy designers.",
     siteName: "Khattat",
+    images: [
+      {
+        url: "/og.png",
+        width: 1730,
+        height: 909,
+        alt: "Khattat — Precision tools for Square Kufic calligraphy",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Khattat | Professional Square Kufic Calligraphy Editor",
     description:
       "An infinite, pixel-perfect digital canvas built specifically for professional Kufic calligraphy designers.",
+    images: ["/og.png"],
   },
   icons: {
     icon: "/logo.svg",
