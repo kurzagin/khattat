@@ -1,6 +1,8 @@
-﻿import { Grid3X3, Layers, PenTool, ArrowRight, MousePointerSquareDashed, Sparkles, Move3d, Zap, Check, Type, Eraser, Hand, Palette, Save, Library, Languages, Settings, Trash2, Mail, Globe, Monitor, Apple, Terminal, Smartphone, Download } from "lucide-react";
+import { Grid3X3, Layers, PenTool, ArrowRight, MousePointerSquareDashed, Sparkles, Move3d, Zap, Check, Type, Eraser, Hand, Palette, Save, Library, Languages, Settings, Trash2, Mail, Globe, Monitor, Download } from "lucide-react";
 import Link from "next/link";
 import VideoPlayer from "../components/VideoPlayer";
+import { KofiEmbed } from "../components/KofiEmbed";
+import { TrakteerEmbed } from "../components/TrakteerEmbed";
 
 const GithubIcon = ({ size = 24, className = "" }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
@@ -238,32 +240,32 @@ export default function Home() {
         {/* Platforms Section */}
         <section id="platforms" className="mb-40 w-full">
           <div className="mb-16 text-center">
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-4">Available everywhere.</h2>
-            <p className="text-zinc-400 text-xl max-w-2xl mx-auto">Download Khattat for your platform of choice.</p>
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-4">Use Khattat your way.</h2>
+            <p className="text-zinc-400 text-xl max-w-2xl mx-auto">Work from the dedicated desktop app or launch the full editor in your browser.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
-            {/* Windows */}
+            {/* Desktop */}
             <div className="premium-glass p-8 rounded-[2rem] flex flex-col items-center text-center group hover:bg-white/5 transition-all">
               <div className="w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <Monitor className="w-8 h-8 text-blue-400" />
               </div>
-              <h3 className="text-xl font-bold mb-2">Windows</h3>
+              <h3 className="text-xl font-bold mb-2">Desktop</h3>
               <p className="text-zinc-500 text-sm mb-6">Windows 10/11</p>
-              <button className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-full text-sm font-semibold transition-colors w-full justify-center mt-auto">
-                <Download className="w-4 h-4" /> .exe
-              </button>
+              <a href="https://github.com/kurzagin/khattat/releases/latest" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-full text-sm font-semibold transition-colors w-full justify-center mt-auto">
+                <Download className="w-4 h-4" /> Download desktop
+              </a>
             </div>
 
-            {/* Mobile */}
+            {/* Web */}
             <div className="premium-glass p-8 rounded-[2rem] flex flex-col items-center text-center group hover:bg-white/5 transition-all">
               <div className="w-16 h-16 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Smartphone className="w-8 h-8 text-emerald-400" />
+                <Globe className="w-8 h-8 text-emerald-400" />
               </div>
-              <h3 className="text-xl font-bold mb-2">Android</h3>
-              <p className="text-zinc-500 text-sm mb-6">Android 8.0+</p>
-              <button className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-full text-sm font-semibold transition-colors w-full justify-center mt-auto">
-                <Download className="w-4 h-4" /> .apk
-              </button>
+              <h3 className="text-xl font-bold mb-2">Web</h3>
+              <p className="text-zinc-500 text-sm mb-6">No installation required</p>
+              <Link href="/editor" className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-full text-sm font-semibold transition-colors w-full justify-center mt-auto">
+                Launch web editor <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
           </div>
         </section>
@@ -329,6 +331,16 @@ export default function Home() {
                   <div>
                     <h4 className="text-white font-bold text-lg">Khattat Studio</h4>
                     <p className="text-zinc-500 text-sm">Created by Kur Zagin</p>
+                  </div>
+                </div>
+                <div className="mt-6 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+                  <p className="mb-1 text-sm font-bold text-white">Support Khattat</p>
+                  <p className="mb-5 text-sm leading-relaxed text-zinc-500">
+                    Help keep Khattat free, open source, and improving for the calligraphy community.
+                  </p>
+                  <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
+                    <KofiEmbed />
+                    <TrakteerEmbed />
                   </div>
                 </div>
               </div>
