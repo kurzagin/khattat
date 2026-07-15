@@ -51,7 +51,7 @@ export default function Home() {
             <Link href="#contact" className="text-sm font-medium text-zinc-300 hover:text-white hover:bg-white/10 px-5 py-2 rounded-full transition-all">Contact</Link>
           </nav>
           <div className="pr-1">
-            <a href="https://github.com/krzgn/khattat" className="bg-white text-black font-bold px-6 py-2.5 rounded-full transition-all hover:bg-zinc-200 text-sm hidden sm:block">
+            <a href="https://github.com/kurzagin/khattat" className="bg-white text-black font-bold px-6 py-2.5 rounded-full transition-all hover:bg-zinc-200 text-sm hidden sm:block">
               View Source
             </a>
           </div>
@@ -299,7 +299,7 @@ export default function Home() {
                 <div className="text-zinc-500 text-sm font-bold tracking-[0.2em] uppercase mb-4">MIT Licensed</div>
                 <GithubIcon size={72} className="mb-8 text-white" />
                 
-                <a href="https://github.com/krzgn/khattat" className="w-full py-4 bg-white text-black text-center font-extrabold rounded-xl transition-all hover:bg-zinc-200 shadow-[0_0_20px_rgba(255,255,255,0.1)] block">
+                <a href="https://github.com/kurzagin/khattat" className="w-full py-4 bg-white text-black text-center font-extrabold rounded-xl transition-all hover:bg-zinc-200 shadow-[0_0_20px_rgba(255,255,255,0.1)] block">
                   Explore on GitHub
                 </a>
                 <p className="mt-4 text-xs text-zinc-500 text-center font-medium">
@@ -350,11 +350,11 @@ export default function Home() {
                   </div>
                 </a>
 
-                <a href="https://github.com/krzgn" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 bg-zinc-900/50 p-4 rounded-2xl border border-zinc-800/50 hover:bg-zinc-800 hover:border-zinc-700 transition-all group/card">
+                <a href="https://github.com/kurzagin" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 bg-zinc-900/50 p-4 rounded-2xl border border-zinc-800/50 hover:bg-zinc-800 hover:border-zinc-700 transition-all group/card">
                   <GithubIcon size={20} className="text-zinc-500 group-hover/card:text-white transition-colors" />
                   <div className="flex flex-col">
                     <span className="text-xs text-zinc-500 uppercase font-semibold tracking-wider group-hover/card:text-zinc-400 transition-colors">GitHub</span>
-                    <span className="text-zinc-300 group-hover/card:text-white transition-colors">@krzgn</span>
+                    <span className="text-zinc-300 group-hover/card:text-white transition-colors">@kurzagin</span>
                   </div>
                 </a>
                 

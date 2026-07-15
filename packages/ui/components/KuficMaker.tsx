@@ -2004,11 +2004,11 @@ export default function Khattat(props: KhattatProps) {
                             <span className="text-zinc-200 font-medium">Kur Zagin</span>
                           </div>
                         </div>
-                        <a href="https://github.com/krzgn" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 bg-zinc-900/50 p-4 rounded-2xl border border-zinc-800/50 hover:bg-zinc-800 hover:border-zinc-700 transition-all group">
+                        <a href="https://github.com/kurzagin" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 bg-zinc-900/50 p-4 rounded-2xl border border-zinc-800/50 hover:bg-zinc-800 hover:border-zinc-700 transition-all group">
                           <GithubIcon size={18} className="text-zinc-500 group-hover:text-white transition-colors" />
                           <div className="flex flex-col">
                             <span className="text-xs text-zinc-500 uppercase font-semibold tracking-wider group-hover:text-zinc-400 transition-colors">GitHub</span>
-                            <span className="text-zinc-300 group-hover:text-white transition-colors">@krzgn</span>
+                            <span className="text-zinc-300 group-hover:text-white transition-colors">@kurzagin</span>
                           </div>
                         </a>
                         <a href="https://krzgn.xyz" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 bg-zinc-900/50 p-4 rounded-2xl border border-zinc-800/50 hover:bg-zinc-800 hover:border-zinc-700 transition-all group sm:col-span-2">

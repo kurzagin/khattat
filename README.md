@@ -53,4 +53,4 @@ Khattat is released under the [MIT License](LICENSE).
 - Website: [khattat.krzgn.xyz](https://khattat.krzgn.xyz)
 - Email: [khattat@krzgn.xyz](mailto:khattat@krzgn.xyz)
 - X: [@kurzagin](https://twitter.com/kurzagin)
-- GitHub: [@krzgn](https://github.com/krzgn)
+- GitHub: [@kurzagin](https://github.com/kurzagin)

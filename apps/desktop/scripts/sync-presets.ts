@@ -9,11 +9,31 @@ const __dirname = path.dirname(__filename);
 const webDbPath = path.resolve(__dirname, '../../web/sqlite.db');
 const outPath = path.resolve(__dirname, '../src/app/starter-presets.json');
 
+type PresetRow = {
+  id: string;
+  rasm_id: string;
+  position: string;
+  cells: string;
+  width: number;
+  height: number;
+  letter_name: string | null;
+};
+
+if (!fs.existsSync(webDbPath)) {
+  if (fs.existsSync(outPath)) {
+    console.warn('Web preset database not found; using the committed starter presets.');
+    process.exit(0);
+  }
+
+  console.error('Neither the web preset database nor committed starter presets were found.');
+  process.exit(1);
+}
+
 try {
   const db = new Database(webDbPath, { readonly: true });
   const presets = db.query('SELECT * FROM presets').all();
   
-  const formatted = presets.map((p: any) => ({
+  const formatted = (presets as PresetRow[]).map((p) => ({
     id: p.id,
     rasmId: p.rasm_id,
     position: p.position,
